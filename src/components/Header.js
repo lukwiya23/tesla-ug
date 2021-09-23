@@ -5,6 +5,7 @@ import CloseIcon from "@material-ui/icons/Close"
 import {useState} from 'react'
 import {selectCars} from '../slices/carSlice'
 import {useSelector} from 'react-redux'
+import Image from 'next/image'
 
 function Header() {
 
@@ -16,7 +17,7 @@ function Header() {
         <Container>
             <HeadShake>
             <a href="">
-                <img src="/images/logo.svg" alt="" />
+                <Image src="/images/logo.svg" width="70px" height="70px" objectFit="contain" alt="" />
             </a>
 
             {/* middle nav menu */}
