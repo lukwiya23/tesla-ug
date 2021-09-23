@@ -3,10 +3,13 @@ import MenuIcon from '@material-ui/icons/Menu'
 import HeadShake from 'react-reveal/HeadShake';
 import CloseIcon from "@material-ui/icons/Close"
 import {useState} from 'react'
+import {selectCars} from '../slices/carSlice'
+import {useSelector} from 'react-redux'
 
 function Header() {
 
     const [burgerStatus, setBurgerStatus] = useState(false)
+    const cars = useSelector(selectCars)
 
     return (
   
@@ -16,15 +19,14 @@ function Header() {
                 <img src="/images/logo.svg" alt="" />
             </a>
 
-            {/* middle menu */}
+            {/* middle nav menu */}
             <Menu>
-                <a href="#">Model S</a>
-                <a href="#">Model Y</a>
-                <a href="#">Model 3</a>
-                <a href="#">Model X</a>
+                {cars && cars.map((car, index)=>(
+                    <a key={index} href="#">{car}</a>
+                ))}
             </Menu>
 
-            {/* Right Menu */}      
+            {/* Right nav Menu */}      
             <RightMenu>     
             <a href="#">SHOP</a>
             <a href="#">TESLA ACCOUNT</a>
@@ -39,6 +41,9 @@ function Header() {
                 <CustomClose onClick={()=>setBurgerStatus(false)}/>
                 </CloseWrapper>
                 {/* nav */}
+                {cars && cars.map((car, index)=>(
+                    <li><a key={index} href="#">{car}</a></li>
+                ))}
             <li><a href="">Exisiting Inventory</a></li>
             <li><a href="">Used Inventory</a></li>
             <li><a href="">Trade-In</a></li>

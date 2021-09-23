@@ -15,6 +15,7 @@ body{
   width: 100%;
   overflow-x: hidden;
   
+  
 }
 
 @keyframes animateDown{
@@ -25,6 +26,7 @@ body{
     transform: translateY(6px);
   }
   60%{
+
     transform: translateY(3px);
   }
 }
