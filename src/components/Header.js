@@ -22,9 +22,11 @@ function Header() {
 
             {/* middle nav menu */}
             <Menu>
-                {cars && cars.map((car, index)=>(
-                    <a key={index} href="#">{car}</a>
-                ))}
+                          
+            <a href="">Model S</a>
+            <a href="">Model 3</a>
+            <a href="">Model X</a>
+            <a href="">Model Y</a>
             </Menu>
 
             {/* Right nav Menu */}      
@@ -42,9 +44,12 @@ function Header() {
                 <CustomClose onClick={()=>setBurgerStatus(false)}/>
                 </CloseWrapper>
                 {/* nav */}
-                {cars && cars.map((car, index)=>(
-                    <li><a key={index} href="#">{car}</a></li>
-                ))}
+                
+            <li><a href="">Model S</a></li>
+            <li><a href="">Model 3</a></li>
+            <li><a href="">Model X</a></li>
+            <li><a href="">Model Y</a></li>
+            
             <li><a href="">Exisiting Inventory</a></li>
             <li><a href="">Used Inventory</a></li>
             <li><a href="">Trade-In</a></li>
