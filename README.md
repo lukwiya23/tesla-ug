@@ -1,7 +1,7 @@
 
 ## TESLA 
 
-A pixel perfect clone of the original site built in NextJs
+A pixel perfect clone of the original site built in NextJs with fluid animations
 
 
 
